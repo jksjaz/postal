@@ -24,7 +24,7 @@ apt install -y software-properties-common
 apt-add-repository ppa:brightbox/ruby-ng -y
 apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://mirrors.coreix.net/mariadb/repo/10.1/ubuntu bionic main'
-curl -sL https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | apt-key add -
+curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
 add-apt-repository 'deb http://www.rabbitmq.com/debian/ bionic main'
 apt update
 export DEBIAN_FRONTEND=noninteractive
